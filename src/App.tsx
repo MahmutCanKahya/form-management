@@ -11,12 +11,13 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <BrowserRouter basename="/form-management">
+        <BrowserRouter>
           <Routes>
-            <Route path="/">
+            <Route>
               <Route path="/forms" element={<HomePage />} />
               <Route path="/forms/:formName" element={<FormPage />} />
             </Route>
+            <Route path="*" element={<Navigate replace to="/forms" />} />
           </Routes>
         </BrowserRouter>
       </Provider>
