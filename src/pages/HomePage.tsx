@@ -25,7 +25,7 @@ const HomePage = () => {
         onClose={() => {
           setOpen(false);
         }}
-      ></CreateFormModal>
+      />
       <h1
         className="text-center my-4"
         style={{
